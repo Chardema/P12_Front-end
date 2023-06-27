@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a96422e-7973-4d1c-937c-5414a0cb966c" name="Changes" comment="suppression sur branche secondaire">
-      <change afterPath="$PROJECT_DIR$/src/components/Header/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/header.module.scss" afterDir="false" />
+    <list default="true" id="5a96422e-7973-4d1c-937c-5414a0cb966c" name="Changes" comment="début du passage en react, travaille sur le component header">
+      <change afterPath="$PROJECT_DIR$/src/components/Body/body.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Body/body.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
@@ -74,7 +74,15 @@
       <option name="project" value="LOCAL" />
       <updated>1687873173402</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="début du passage en react, travaille sur le component header">
+      <option name="closed" value="true" />
+      <created>1687875349225</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687875349225</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +101,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="suppression sur branche secondaire" />
-    <option name="LAST_COMMIT_MESSAGE" value="suppression sur branche secondaire" />
+    <MESSAGE value="début du passage en react, travaille sur le component header" />
+    <option name="LAST_COMMIT_MESSAGE" value="début du passage en react, travaille sur le component header" />
   </component>
 </project>

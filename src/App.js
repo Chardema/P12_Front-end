@@ -1,9 +1,13 @@
-import Header from "./components/Header/header";
+import React from 'react';
+import header from "./components/Header/header";
+import Body from "./components/Body/body";
 
-function App() {
+
+const App = () => {
   return (
-  <Header />
+        <header />
+        <Body />
   );
-}
+};
 
 export default App;
