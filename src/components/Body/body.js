@@ -1,16 +1,17 @@
 import React from 'react';
+import styles from "./body.module.scss"
 
-const Body = () => {
+const Main = () => {
     const saveEmployee = () => {
         // Ajoutez ici la logique pour enregistrer l'employé
     };
 
     return (
         <div>
-            <div className="title">
+            <div className={styles.title}>
                 <h1>HRnet</h1>
             </div>
-            <div className="container">
+            <div className={styles.container}>
                 <a href="employee-list.html">View Current Employees</a>
                 <h2>Create Employee</h2>
                 <form action="#" id="create-employee">
@@ -26,7 +27,7 @@ const Body = () => {
                     <label htmlFor="start-date">Start Date</label>
                     <input id="start-date" type="text" />
 
-                    <fieldset className="address">
+                    <fieldset className={styles.address}>
                         <legend>Address</legend>
 
                         <label htmlFor="street">Street</label>
@@ -54,9 +55,9 @@ const Body = () => {
 
                 <button onClick={saveEmployee}>Save</button>
             </div>
-            <div id="confirmation" className="modal">Employee Created!</div>
+            <div id="confirmation" className={styles.modal}>Employee Created!</div>
         </div>
     );
 };
 
-export default Body;
+export default Main;
