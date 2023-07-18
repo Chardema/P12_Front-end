@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a96422e-7973-4d1c-937c-5414a0cb966c" name="Changes" comment="Mise en place router et début employee-list.js">
-      <change afterPath="$PROJECT_DIR$/src/redux/employeeActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/reducer/employeeReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+    <list default="true" id="5a96422e-7973-4d1c-937c-5414a0cb966c" name="Changes" comment="mise en place redux // problème avec employee-list.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Body/body.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/body.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/header.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/Home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/Home/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/employee-list/employee-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/employee-list/employee-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/employeeActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/employeeActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducer/employeeReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducer/employeeReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,7 @@
       <workItem from="1687871648801" duration="1773000" />
       <workItem from="1688127369277" duration="939000" />
       <workItem from="1688560839469" duration="26000" />
-      <workItem from="1689694065781" duration="1950000" />
+      <workItem from="1689694065781" duration="4416000" />
     </task>
     <task id="LOCAL-00001" summary="suppression sur branche secondaire">
       <option name="closed" value="true" />
@@ -119,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689695699193</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="mise en place redux // problème avec employee-list.js">
+      <option name="closed" value="true" />
+      <created>1689696369042</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689696369042</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,17 +151,7 @@
     <MESSAGE value="travail sur le body" />
     <MESSAGE value="première page en react Ok" />
     <MESSAGE value="Mise en place router et début employee-list.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise en place router et début employee-list.js" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/Body/body.js</url>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="mise en place redux // problème avec employee-list.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="mise en place redux // problème avec employee-list.js" />
   </component>
 </project>

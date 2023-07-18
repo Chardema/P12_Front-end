@@ -4,3 +4,4 @@ export const saveEmployee = (employee) => {
         payload: employee,
     };
 };
+

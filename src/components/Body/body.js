@@ -1,53 +1,32 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import styles from './body.module.scss';
+import { useDispatch } from 'react-redux';
 import { saveEmployee } from '../../redux/employeeActions';
+import styles from './body.module.scss'
 
 const Main = () => {
     const dispatch = useDispatch();
 
-    const handleSaveEmployee = () => {
+    const handleSaveEmployee = (event) => {
+        event.preventDefault();
+        // Récupérer le formulaire à partir de l'événement
+        const form = event.target.form;
         // Récupérer les données de l'employé à partir du formulaire
-        const firstName = document.getElementById('first-name').value;
-        const lastName = document.getElementById('last-name').value;
-        const dateOfBirth = document.getElementById('date-of-birth').value;
-        const startDate = document.getElementById('start-date').value;
-        const street = document.getElementById('street').value;
-        const city = document.getElementById('city').value;
-        const state = document.getElementById('state').value;
-        const zipCode = document.getElementById('zip-code').value;
-        const department = document.getElementById('department').value;
-
-        // Créer un objet représentant l'employé
-        const employee = {
-            firstName,
-            lastName,
-            dateOfBirth,
-            startDate,
-            street,
-            city,
-            state,
-            zipCode,
-            department,
-        };
-
+        const formData = new FormData(form);
+        const employee = Object.fromEntries(formData);
         // Enregistrer l'employé à l'aide de l'action Redux
         dispatch(saveEmployee(employee));
-
-        // Réinitialiser le formulaire après l'enregistrement
-        document.getElementById('create-employee').reset();
-
-        // Afficher un message de confirmation ou une notification
-        // Vous pouvez utiliser une bibliothèque comme react-toastify ou material-ui/snackbar pour cela
+        // Réinitialiser le formulaire après l'enregistrement (si nécessaire)
+        form.reset();
     };
 
+
     return (
-        <div>
+    <div>
             <div className={styles.title}>
-                <h1>HRnet</h1>
+                <h1>HRnet - Current Employees</h1>
             </div>
             <div className={styles.container}>
-                <a href="employee-list.js">View Current Employees</a>
+                <a href="/employee-list">View Current Employees</a>
                 <h2>Create Employee</h2>
                 <form action="#" id="create-employee">
                     <label htmlFor="first-name">First Name</label>
