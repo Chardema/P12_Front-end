@@ -3,7 +3,29 @@ import styles from "./body.module.scss"
 
 const Main = () => {
     const saveEmployee = () => {
-        // Ajoutez ici la logique pour enregistrer l'employé
+        // Récupérer les données de l'employé à partir du formulaire
+        const firstName = document.getElementById("first-name").value;
+        const lastName = document.getElementById("last-name").value;
+        const dateOfBirth = document.getElementById("date-of-birth").value;
+        const startDate = document.getElementById("start-date").value;
+        const street = document.getElementById("street").value;
+        const city = document.getElementById("city").value;
+        const state = document.getElementById("state").value;
+        const zipCode = document.getElementById("zip-code").value;
+        const department = document.getElementById("department").value;
+
+        // Créer un objet représentant l'employé
+        const employee = {
+            firstName,
+            lastName,
+            dateOfBirth,
+            startDate,
+            street,
+            city,
+            state,
+            zipCode,
+            department,
+        };
     };
 
     return (
@@ -12,7 +34,7 @@ const Main = () => {
                 <h1>HRnet</h1>
             </div>
             <div className={styles.container}>
-                <a href="employee-list.html">View Current Employees</a>
+                <a href="employee-list.js">View Current Employees</a>
                 <h2>Create Employee</h2>
                 <form action="#" id="create-employee">
                     <label htmlFor="first-name">First Name</label>

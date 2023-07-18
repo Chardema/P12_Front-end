@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a96422e-7973-4d1c-937c-5414a0cb966c" name="Changes" comment="travail sur le body">
-      <change afterPath="$PROJECT_DIR$/src/components/Pages/Home/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pages/Home/home.module.scss" afterDir="false" />
+    <list default="true" id="5a96422e-7973-4d1c-937c-5414a0cb966c" name="Changes" comment="première page en react Ok">
+      <change afterPath="$PROJECT_DIR$/src/components/Pages/employee-list/employee-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Body/body.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/body.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/Home/home.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/Home/home.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +42,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "HRtransform",
+    "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/chris/OneDrive/Documents/chardeman_13_02062023",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -65,6 +69,9 @@
       <option name="presentableId" value="Default" />
       <updated>1687871647727</updated>
       <workItem from="1687871648801" duration="1773000" />
+      <workItem from="1688127369277" duration="939000" />
+      <workItem from="1688560839469" duration="26000" />
+      <workItem from="1689694065781" duration="1291000" />
     </task>
     <task id="LOCAL-00001" summary="suppression sur branche secondaire">
       <option name="closed" value="true" />
@@ -90,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1687876201824</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="première page en react Ok">
+      <option name="closed" value="true" />
+      <created>1687876735100</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687876735100</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,6 +126,18 @@
     <MESSAGE value="suppression sur branche secondaire" />
     <MESSAGE value="début du passage en react, travaille sur le component header" />
     <MESSAGE value="travail sur le body" />
-    <option name="LAST_COMMIT_MESSAGE" value="travail sur le body" />
+    <MESSAGE value="première page en react Ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="première page en react Ok" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Body/body.js</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
