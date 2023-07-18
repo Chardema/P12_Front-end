@@ -1,18 +1,22 @@
 import React from 'react';
-import styles from "./body.module.scss"
+import { useSelector, useDispatch } from 'react-redux';
+import styles from './body.module.scss';
+import { saveEmployee } from '../../redux/employeeActions';
 
 const Main = () => {
-    const saveEmployee = () => {
+    const dispatch = useDispatch();
+
+    const handleSaveEmployee = () => {
         // Récupérer les données de l'employé à partir du formulaire
-        const firstName = document.getElementById("first-name").value;
-        const lastName = document.getElementById("last-name").value;
-        const dateOfBirth = document.getElementById("date-of-birth").value;
-        const startDate = document.getElementById("start-date").value;
-        const street = document.getElementById("street").value;
-        const city = document.getElementById("city").value;
-        const state = document.getElementById("state").value;
-        const zipCode = document.getElementById("zip-code").value;
-        const department = document.getElementById("department").value;
+        const firstName = document.getElementById('first-name').value;
+        const lastName = document.getElementById('last-name').value;
+        const dateOfBirth = document.getElementById('date-of-birth').value;
+        const startDate = document.getElementById('start-date').value;
+        const street = document.getElementById('street').value;
+        const city = document.getElementById('city').value;
+        const state = document.getElementById('state').value;
+        const zipCode = document.getElementById('zip-code').value;
+        const department = document.getElementById('department').value;
 
         // Créer un objet représentant l'employé
         const employee = {
@@ -26,6 +30,15 @@ const Main = () => {
             zipCode,
             department,
         };
+
+        // Enregistrer l'employé à l'aide de l'action Redux
+        dispatch(saveEmployee(employee));
+
+        // Réinitialiser le formulaire après l'enregistrement
+        document.getElementById('create-employee').reset();
+
+        // Afficher un message de confirmation ou une notification
+        // Vous pouvez utiliser une bibliothèque comme react-toastify ou material-ui/snackbar pour cela
     };
 
     return (
@@ -75,7 +88,7 @@ const Main = () => {
                     </select>
                 </form>
 
-                <button onClick={saveEmployee}>Save</button>
+                <button onClick={handleSaveEmployee}>Save</button>
             </div>
             <div id="confirmation" className={styles.modal}>Employee Created!</div>
         </div>
