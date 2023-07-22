@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a96422e-7973-4d1c-937c-5414a0cb966c" name="Changes" comment="mise en place redux // problème avec employee-list.js">
+    <list default="true" id="5a96422e-7973-4d1c-937c-5414a0cb966c" name="Changes" comment="essaie de faire fonctionner le formulaire">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Body/body.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/body.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/header.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/Home/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/Home/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/employee-list/employee-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/employee-list/employee-list.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/employeeActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/employeeActions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/reducer/employeeReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducer/employeeReducer.js" afterDir="false" />
@@ -39,21 +36,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "HRtransform",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/chris/OneDrive/Documents/chardeman_13_02062023",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;HRtransform&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/chris/OneDrive/Documents/chardeman_13_02062023&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -78,7 +75,8 @@
       <workItem from="1687871648801" duration="1773000" />
       <workItem from="1688127369277" duration="939000" />
       <workItem from="1688560839469" duration="26000" />
-      <workItem from="1689694065781" duration="4416000" />
+      <workItem from="1689694065781" duration="5351000" />
+      <workItem from="1690036522851" duration="3402000" />
     </task>
     <task id="LOCAL-00001" summary="suppression sur branche secondaire">
       <option name="closed" value="true" />
@@ -128,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689696369042</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="essaie de faire fonctionner le formulaire">
+      <option name="closed" value="true" />
+      <created>1689702388072</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1689702388072</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +158,7 @@
     <MESSAGE value="première page en react Ok" />
     <MESSAGE value="Mise en place router et début employee-list.js" />
     <MESSAGE value="mise en place redux // problème avec employee-list.js" />
-    <option name="LAST_COMMIT_MESSAGE" value="mise en place redux // problème avec employee-list.js" />
+    <MESSAGE value="essaie de faire fonctionner le formulaire" />
+    <option name="LAST_COMMIT_MESSAGE" value="essaie de faire fonctionner le formulaire" />
   </component>
 </project>

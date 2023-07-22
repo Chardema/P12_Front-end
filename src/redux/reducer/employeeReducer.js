@@ -1,4 +1,3 @@
-// employeeReducer.js
 const initialState = {
     employees: [],
 };
@@ -6,7 +5,7 @@ const initialState = {
 const employeeReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'SAVE_EMPLOYEE':
-            return {
+           return {
                 ...state,
                 employees: [...state.employees, action.payload],
             };

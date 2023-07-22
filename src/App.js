@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'; // Importez Routes et Route
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import EmployeeList from './components/Pages/employee-list/employee-list';
 import Home from './components/Pages/Home/home';
