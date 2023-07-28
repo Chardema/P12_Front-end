@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a96422e-7973-4d1c-937c-5414a0cb966c" name="Changes" comment="changement d'état et sauvegarde fonctionnelle">
-      <change afterPath="$PROJECT_DIR$/src/components/Pages/employee-list/employee-list.module.scss" afterDir="false" />
+    <list default="true" id="5a96422e-7973-4d1c-937c-5414a0cb966c" name="Changes" comment="ajout bouton previous next et un peu de scss">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Body/body.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/body.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Body/body.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/body.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Pages/employee-list/employee-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/employee-list/employee-list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pages/employee-list/employee-list.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/employee-list/employee-list.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +78,7 @@
       <workItem from="1690039945539" duration="35000" />
       <workItem from="1690238869208" duration="2000" />
       <workItem from="1690548492106" duration="33000" />
-      <workItem from="1690548564433" duration="5078000" />
+      <workItem from="1690548564433" duration="5842000" />
     </task>
     <task id="LOCAL-00001" summary="suppression sur branche secondaire">
       <option name="closed" value="true" />
@@ -146,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690039973636</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ajout bouton previous next et un peu de scss">
+      <option name="closed" value="true" />
+      <created>1690553928012</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1690553928013</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +178,7 @@
     <MESSAGE value="mise en place redux // problème avec employee-list.js" />
     <MESSAGE value="essaie de faire fonctionner le formulaire" />
     <MESSAGE value="changement d'état et sauvegarde fonctionnelle" />
-    <option name="LAST_COMMIT_MESSAGE" value="changement d'état et sauvegarde fonctionnelle" />
+    <MESSAGE value="ajout bouton previous next et un peu de scss" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout bouton previous next et un peu de scss" />
   </component>
 </project>

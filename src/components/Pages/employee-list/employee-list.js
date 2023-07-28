@@ -87,9 +87,11 @@ const EmployeeList = () => {
             <p>
                 Showing {Math.min(entriesToShow, filteredEmployees.length)} of {filteredEmployees.length} entries
             </p>
-            <button onClick={() => setCurrentPage((page) => Math.max(page - 1, 0))}>Previous</button>
-            <button onClick={() => setCurrentPage((page) => Math.min(page + 1, Math.ceil(filteredEmployees.length / entriesToShow) - 1))}>Next</button>
+                <div className={styles.buttoncontainer}>
+            <button  className={styles.button} onClick={() => setCurrentPage((page) => Math.max(page - 1, 0))}>Previous</button>
+            <button  className={styles.button} onClick={() => setCurrentPage((page) => Math.min(page + 1, Math.ceil(filteredEmployees.length / entriesToShow) - 1))}>Next</button>
             </div>
+                </div>
             <Link to="/" className={styles.link}>Home</Link>
         </div>
     );

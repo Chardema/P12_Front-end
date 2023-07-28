@@ -58,4 +58,13 @@ h1 {
   align-items: center;
   margin-top: 10px;
 }
-
+ .button {
+   background-color: white;
+   margin-right: 10px;
+   color: black;
+   border: 1px solid grey;
+   border-radius: 5px ;
+ }
+.button:hover{
+  background-color: #4CAF50;
+}
