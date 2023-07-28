@@ -21,3 +21,10 @@ label {
 .address {
   margin-top: 10px;
 }
+input[type="text"],
+input[type="date"],
+select {
+  width: 100%;
+  box-sizing: border-box;
+}
+

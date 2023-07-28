@@ -44,19 +44,19 @@ const Main = () => {
                     <input name="lastname" type="text" id="last-name" />
 
                     <label htmlFor="date-of-birth">Date of Birth</label>
-                    <input type="date" id="date-of-birth" />
+                    <input name="date" type="date" id="date-of-birth" />
 
                     <label htmlFor="start-date">Start Date</label>
-                    <input type="date" id="start-date" />
+                    <input name = "date" type="date" id="start-date" />
 
                     <fieldset className={styles.address}>
                         <legend>Address</legend>
 
                         <label htmlFor="street">Street</label>
-                        <input type="text" id="street" />
+                        <input name ="street" type="text" id="street" />
 
                         <label htmlFor="city">City</label>
-                        <input type="text" id="city" />
+                        <input  name ="city" type="text" id="city" />
 
                         <label htmlFor="state">State</label>
                         <select name="state" id="state">
@@ -66,7 +66,7 @@ const Main = () => {
                         </select>
 
                         <label htmlFor="zip-code">Zip Code</label>
-                        <input type="text" id="zip-code" />
+                        <input name="zip" type="text" id="zip-code" />
                     </fieldset>
 
                     <label htmlFor="department">Department</label>
