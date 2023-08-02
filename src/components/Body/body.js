@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { saveEmployee } from '../../redux/employeeActions';
 import styles from './body.module.scss';
 import {Link} from "react-router-dom";
+import Dropdown from "dropdown_chardema/dropdown";
 
 const Main = () => {
     const dispatch = useDispatch();
@@ -103,14 +104,17 @@ const Main = () => {
                     </fieldset>
 
                     <label htmlFor="department">Department</label>
-                    <select name="department" id="department">
-                        <option value="Sales">Sales</option>
-                        <option value="Marketing">Marketing</option>
-                        <option value="Engineering">Engineering</option>
-                        <option value="Human Resources">Human Resources</option>
-                        <option value="Legal">Legal</option>
-                    </select>
-
+                    <Dropdown
+                        name="department"
+                        id="department"
+                        options={[
+                            { value: 'Sales', label: 'Sales' },
+                            { value: 'Marketing', label: 'Marketing' },
+                            { value: 'Engineering', label: 'Engineering' },
+                            { value: 'Human Resources', label: 'Human Resources' },
+                            { value: 'Legal', label: 'Legal' },
+                        ]}
+                    />
                     <button type="button" onClick={handleSaveEmployee}>Save</button>
                 </form>
             </div>

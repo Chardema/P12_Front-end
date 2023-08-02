@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a96422e-7973-4d1c-937c-5414a0cb966c" name="Changes" comment="ajout bouton previous next et un peu de scss">
+    <list default="true" id="5a96422e-7973-4d1c-937c-5414a0cb966c" name="Changes" comment="ajout de verif avec onchange et seterror et ajout de tout les champs dans le tableau">
+      <change afterPath="$PROJECT_DIR$/plugin react(menu déroulant)/dropdown.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Body/body.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Body/body.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Pages/employee-list/employee-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pages/employee-list/employee-list.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +81,7 @@
       <workItem from="1690557509623" duration="999000" />
       <workItem from="1690982020230" duration="10000" />
       <workItem from="1690982040097" duration="17000" />
-      <workItem from="1690985692874" duration="1680000" />
+      <workItem from="1690985692874" duration="2473000" />
     </task>
     <task id="LOCAL-00001" summary="suppression sur branche secondaire">
       <option name="closed" value="true" />
@@ -166,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690554617443</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="ajout de verif avec onchange et seterror et ajout de tout les champs dans le tableau">
+      <option name="closed" value="true" />
+      <created>1690987581813</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1690987581813</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +198,7 @@
     <MESSAGE value="essaie de faire fonctionner le formulaire" />
     <MESSAGE value="changement d'état et sauvegarde fonctionnelle" />
     <MESSAGE value="ajout bouton previous next et un peu de scss" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout bouton previous next et un peu de scss" />
+    <MESSAGE value="ajout de verif avec onchange et seterror et ajout de tout les champs dans le tableau" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajout de verif avec onchange et seterror et ajout de tout les champs dans le tableau" />
   </component>
 </project>

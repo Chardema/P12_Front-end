@@ -1,0 +1,15 @@
+{
+  "name": "dropdown_chardema",
+  "version": "1.0.1",
+  "description": "Un exemple de menu déroulant",
+  "keywords": [
+    "dropdown",
+    "javascript",
+    "projet"
+  ],
+  "homepage": "https://mon-site-web.com/mon-projet",
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "license": "MIT"
+}
