@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import styles from "./employee-list.module.scss";
+import { v4 as uuidv4 } from 'uuid';
 import { Link } from "react-router-dom";
 
 const EmployeeList = () => {
     const employees = useSelector((state) => state.employees);
+    console.log(employees)
     const [entriesToShow, setEntriesToShow] = useState(10);
     const [searchValue, setSearchValue] = useState('');
     const [currentPage, setCurrentPage] = useState(0);
@@ -67,7 +69,7 @@ const EmployeeList = () => {
                         {filteredEmployees
                             .slice(currentPage * entriesToShow, (currentPage + 1) * entriesToShow)
                             .map((employee) => (
-                                <tr key={Math.floor(Math.random() * 10000)}>
+                                <tr key={uuidv4()}>
                                     <td>{employee.firstname}</td>
                                     <td>{employee.lastname}</td>
                                     <td>{employee.startDate}</td>

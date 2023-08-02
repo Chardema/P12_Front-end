@@ -6,6 +6,8 @@ import {Link} from "react-router-dom";
 
 const Main = () => {
     const dispatch = useDispatch();
+    const [showError, setShowError] = useState(false);
+    const [showZipError, setShowZipError] = useState(false);
     // Créez une référence pour le formulaire
     const formRef = useRef(null);
     // État pour gérer l'affichage du message de confirmation
@@ -27,6 +29,33 @@ const Main = () => {
         },3000);
     };
 
+    const handleNameChange = (event) => {
+        const { value } = event.target;
+        // Vérifiez si la valeur contient des chiffres
+        if (/\d/.test(value)) {
+            // Si la valeur contient des chiffres, ne mettez pas à jour l'état et affichez le message d'erreur
+            event.preventDefault();
+            setShowError(true);
+        } else {
+            // Sinon, mettez à jour l'état avec la nouvelle valeur et cachez le message d'erreur
+            // setState(value);
+            setShowError(false);
+        }
+    };
+    const handleZipCodeChange = (event) => {
+        const { value } = event.target;
+        // Vérifiez si la valeur ne contient que des chiffres
+        if (!/^\d*$/.test(value)) {
+            // Si la valeur ne contient pas que des chiffres, ne mettez pas à jour l'état et affichez le message d'erreur
+            event.preventDefault();
+            setShowZipError(true);
+        } else {
+            // Sinon, mettez à jour l'état avec la nouvelle valeur et cachez le message d'erreur
+            // setState(value);
+            setShowZipError(false);
+        }
+    };
+
     return (
         <div>
             <div className={styles.title}>
@@ -38,16 +67,18 @@ const Main = () => {
                 {/* Utilisez la référence pour lier le formulaire */}
                 <form ref={formRef} action="#" id="create-employee">
                     <label htmlFor="first-name">First Name</label>
-                    <input  name="firstname" type="text" id="first-name" />
+                    <input  name="firstname" type="text" id="first-name" onChange={handleNameChange} />
+                    {showError && <p className="error">Les chiffres ne sont pas autorisés dans les champs de prénom </p>}
 
                     <label htmlFor="last-name">Last Name</label>
-                    <input name="lastname" type="text" id="last-name" />
+                    <input name="lastname" type="text" id="last-name" onChange={handleNameChange} />
+                    {showError && <p className="error">Les chiffres ne sont pas autorisés dans les champs du nom de famille </p>}
 
                     <label htmlFor="date-of-birth">Date of Birth</label>
-                    <input name="date" type="date" id="date-of-birth" />
+                    <input name="dateOfBirth" type="date" id="date-of-birth" />
 
                     <label htmlFor="start-date">Start Date</label>
-                    <input name = "date" type="date" id="start-date" />
+                    <input name = "startDate" type="date" id="start-date" />
 
                     <fieldset className={styles.address}>
                         <legend>Address</legend>
@@ -66,7 +97,9 @@ const Main = () => {
                         </select>
 
                         <label htmlFor="zip-code">Zip Code</label>
-                        <input name="zip" type="text" id="zip-code" />
+                        <input name="zipCode" type="text" id="zip-code" onChange={handleZipCodeChange} />
+                        {showZipError && <p className="error">Le code postal ne doit contenir que des chiffres.</p>}
+
                     </fieldset>
 
                     <label htmlFor="department">Department</label>
