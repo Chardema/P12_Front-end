@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { saveEmployee } from '../../redux/employeeActions';
 import styles from './body.module.scss';
 import {Link} from "react-router-dom";
-import Dropdown from "dropdown_chardema/dropdown";
+import DatePicker from "../datePicker/datePicker";
 
 const Main = () => {
     const dispatch = useDispatch();
@@ -76,10 +76,10 @@ const Main = () => {
                     {showError && <p className="error">Les chiffres ne sont pas autorisés dans les champs du nom de famille </p>}
 
                     <label htmlFor="date-of-birth">Date of Birth</label>
-                    <input name="dateOfBirth" type="date" id="date-of-birth" />
+                    <DatePicker name="dateOfBirth" id="date-of-birth" />
 
                     <label htmlFor="start-date">Start Date</label>
-                    <input name = "startDate" type="date" id="start-date" />
+                    <DatePicker name="startDate" id="start-date" />
 
                     <fieldset className={styles.address}>
                         <legend>Address</legend>
@@ -104,17 +104,6 @@ const Main = () => {
                     </fieldset>
 
                     <label htmlFor="department">Department</label>
-                    <Dropdown
-                        name="department"
-                        id="department"
-                        options={[
-                            { value: 'Sales', label: 'Sales' },
-                            { value: 'Marketing', label: 'Marketing' },
-                            { value: 'Engineering', label: 'Engineering' },
-                            { value: 'Human Resources', label: 'Human Resources' },
-                            { value: 'Legal', label: 'Legal' },
-                        ]}
-                    />
                     <button type="button" onClick={handleSaveEmployee}>Save</button>
                 </form>
             </div>
