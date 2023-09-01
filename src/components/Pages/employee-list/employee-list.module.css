@@ -1,0 +1,74 @@
+h1 {
+  text-align: center;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tablecontainer {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.link {
+  display: block;
+  text-align: center;
+}
+
+.searchcontainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.searchcontainer label {
+  margin-right: 10px;
+}
+
+#search,
+#entriesToShow {
+  height: 10px;
+}
+
+.pagination {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.button {
+  background-color: white;
+  margin-right: 10px;
+  color: black;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: #4CAF50;
+}
+
+/*# sourceMappingURL=employee-list.module.css.map */

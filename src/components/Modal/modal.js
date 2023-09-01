@@ -1,15 +1,15 @@
 import React from 'react';
-import './Modal.css'; // Assurez-vous d'ajouter des styles CSS pour la modal
+import styles from './Modal.module.scss';
 
-const Modal = ({ isOpen, onClose, children }) => {
+const Modal = ({ isOpen, onClose }) => {
     if (!isOpen) {
         return null;
     }
 
     return (
-        <div className="modal-overlay">
-            <div className="modal-content">
-                {children}
+        <div className={styles.modalOverlay}>
+            <div className={styles.modalContent}>
+                <p>Employee saved successfully!</p>
                 <button onClick={onClose}>Close</button>
             </div>
         </div>
@@ -17,3 +17,4 @@ const Modal = ({ isOpen, onClose, children }) => {
 };
 
 export default Modal;
+

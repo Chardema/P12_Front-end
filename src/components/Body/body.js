@@ -4,31 +4,78 @@ import { saveEmployee } from '../../redux/employeeActions';
 import styles from './body.module.scss';
 import {Link} from "react-router-dom";
 import DatePicker from "../datePicker/datePicker";
+import Modal from "../Modal/modal";
+import { ChrisDropdown } from 'chris_dropdown';
 
 const Main = () => {
     const dispatch = useDispatch();
     const [showError, setShowError] = useState(false);
     const [showZipError, setShowZipError] = useState(false);
+    const [birthD, setBirthD] = useState("");
+    const [startD, setStartD] = useState("");
+
+  const [department, setDepartment] = useState("Sales");
+
+  const departments =[
+                { value: 'Sales', label: 'Sales' },
+                { value: 'Marketing', label: 'Marketing' },
+                { value: 'Engineering', label: 'Engineering' },
+                { value: 'Human Resources', label: 'Human Resources' },
+                { value: 'Legal', label: 'Legal' },
+            ]
+
+
+ const handleSelect = (selectVal)=>{
+  setDepartment(selectVal)
+ }
+
+    const getDateOfBirth = (dateofbirth)=>{
+       setBirthD(dateofbirth)
+    }
+
+      const getStartDate = (startdate)=>{
+        setStartD(startdate)
+    }
+
+
+
     // Créez une référence pour le formulaire
     const formRef = useRef(null);
     // État pour gérer l'affichage du message de confirmation
     const [showConfirmation, setShowConfirmation] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const handleSaveEmployee = () => {
         // Récupérer les données de l'employé à partir du formulaire en utilisant la référence
         const formData = new FormData(formRef.current);
         const employee = Object.fromEntries(formData);
-        console.log(employee)
-        // Enregistrer l'employé à l'aide de l'action Redux
+        employee.dateOfBirth = birthD;
+        employee.startDate = startD;
+        employee.department = department;
+        
+        // Effectuer la validation des champs ici
+        const firstName = employee.firstname;
+        const lastName = employee.lastname;
+        const zipCode = employee.zipCode;
+
+           console.log(employee);
+
+        if (/\d/.test(firstName) || /\d/.test(lastName)) {
+            setShowError(true);
+            return; // Empêche la sauvegarde si une erreur est détectée
+        }
+
+        if (!/^\d*$/.test(zipCode)) {
+            setShowZipError(true);
+            return;
+        }
+
+        // Si aucune erreur n'a été détectée, la sauvegarde continue
         dispatch(saveEmployee(employee));
-        // Réinitialiser le formulaire après l'enregistrement (si nécessaire)
         formRef.current.reset();
-        // Afficher le message de confirmation
         setShowConfirmation(true);
-        // Cacher le message de confirmation après quelques secondes (facultatif)
-        setTimeout(() => {
-            setShowConfirmation(false);
-        },3000);
+        setIsModalOpen(true);
     };
+
 
     const handleNameChange = (event) => {
         const { value } = event.target;
@@ -42,6 +89,9 @@ const Main = () => {
             // setState(value);
             setShowError(false);
         }
+    };
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
     };
     const handleZipCodeChange = (event) => {
         const { value } = event.target;
@@ -76,10 +126,10 @@ const Main = () => {
                     {showError && <p className="error">Les chiffres ne sont pas autorisés dans les champs du nom de famille </p>}
 
                     <label htmlFor="date-of-birth">Date of Birth</label>
-                    <DatePicker name="dateOfBirth" id="date-of-birth" />
+                    <DatePicker onSelectedDate={getDateOfBirth}  id="date-of-birth" />
 
                     <label htmlFor="start-date">Start Date</label>
-                    <DatePicker name="startDate" id="start-date" />
+                    <DatePicker onSelectedDate={getStartDate}  id="start-date" />
 
                     <fieldset className={styles.address}>
                         <legend>Address</legend>
@@ -104,15 +154,16 @@ const Main = () => {
                     </fieldset>
 
                     <label htmlFor="department">Department</label>
+                    <ChrisDropdown 
+                      handleSelect={handleSelect}
+                            name="department"
+                            id="department"
+                            options={departments}
+                    />
                     <button type="button" onClick={handleSaveEmployee}>Save</button>
+                    <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
                 </form>
             </div>
-            {/* Afficher le message de confirmation s'il est vrai */}
-            {showConfirmation && (
-                <div id="confirmation" className={styles.modal}>
-                    Employee Created!
-                </div>
-            )}
         </div>
     );
 };

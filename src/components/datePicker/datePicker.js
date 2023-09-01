@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import './datePicker.scss';
 
-const DatePicker = () => {
-    const [selectedDate, setSelectedDate] = useState(null);
+const DatePicker = ({onSelectedDate}) => {
+    const [selectedDate, setSelectedDate] = useState("");
 
-    const handleDateChange = (event) => {
-        const inputDate = event.target.value;
-        setSelectedDate(inputDate);
-    };
+ 
 
     return (
         <div className="date-picker-container">
             <input
                 type="date"
                 value={selectedDate}
-                onChange={handleDateChange}
+                onChange={(e)=>{
+                    setSelectedDate(e.target.value);
+                    onSelectedDate(e.target.value)
+                }}
             />
             {selectedDate && (
                 <p>Selected date: {selectedDate}</p>

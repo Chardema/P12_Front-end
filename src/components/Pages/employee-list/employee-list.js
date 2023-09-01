@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import styles from "./employee-list.module.scss";
-import { v4 as uuidv4 } from 'uuid';
 import { Link } from "react-router-dom";
+import EmployeeTable from "../../employeeTable/employeeTable";
 
 const EmployeeList = () => {
     const employees = useSelector((state) => state.employees);
@@ -14,7 +14,7 @@ const EmployeeList = () => {
         searchValue === '' ||
         (employee.firstname && employee.firstname.toLowerCase().includes(searchValue.toLowerCase())) ||
         (employee.lastname && employee.lastname.toLowerCase().includes(searchValue.toLowerCase())) ||
-        (employee.email && employee.email.toLowerCase().includes(searchValue.toLowerCase())) ||
+        (employee.dateOfBirth && employee.dateOfBirth.toLowerCase().includes(searchValue.toLowerCase())) ||
         (employee.department && employee.department.toLowerCase().includes(searchValue.toLowerCase())) ||
         (employee.street && employee.street.toLowerCase().includes(searchValue.toLowerCase())) ||
         (employee.city && employee.city.toLowerCase().includes(searchValue.toLowerCase())) ||
@@ -51,38 +51,11 @@ const EmployeeList = () => {
                 {filteredEmployees.length === 0 ? (
                     <p>No data available in table</p>
                 ) : (
-                    <table className={styles.table}>
-                        <thead>
-                        <tr>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Start Date</th>
-                            <th>Department</th>
-                            <th>Date of Birth</th>
-                            <th>Street</th>
-                            <th>City</th>
-                            <th>State</th>
-                            <th>Zip Code</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {filteredEmployees
-                            .slice(currentPage * entriesToShow, (currentPage + 1) * entriesToShow)
-                            .map((employee) => (
-                                <tr key={uuidv4()}>
-                                    <td>{employee.firstname}</td>
-                                    <td>{employee.lastname}</td>
-                                    <td>{employee.startDate}</td>
-                                    <td>{employee.department}</td>
-                                    <td>{employee.dateOfBirth}</td>
-                                    <td>{employee.street}</td>
-                                    <td>{employee.city}</td>
-                                    <td>{employee.state}</td>
-                                    <td>{employee.zipCode}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
+                    <EmployeeTable
+                        employees={filteredEmployees}
+                        currentPage={currentPage}
+                        entriesToShow={entriesToShow}
+                    />
                 )}
             </div>
             <div className={styles.pagination}>
