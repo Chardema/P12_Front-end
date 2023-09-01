@@ -58,6 +58,11 @@ const Main = () => {
         const zipCode = employee.zipCode;
 
            console.log(employee);
+        if (!firstName || !lastName || !birthD || !startD || !employee.street || !employee.city || !employee.state || !zipCode) {
+            // Afficher une erreur si l'un des champs requis est vide
+            alert("Tous les champs marqués d'un astérisque (*) sont obligatoires.");
+            return;
+        }
 
         if (/\d/.test(firstName) || /\d/.test(lastName)) {
             setShowError(true);
@@ -117,38 +122,38 @@ const Main = () => {
                 <h2>Create Employee</h2>
                 {/* Utilisez la référence pour lier le formulaire */}
                 <form ref={formRef} action="#" id="create-employee">
-                    <label htmlFor="first-name">First Name</label>
-                    <input  name="firstname" type="text" id="first-name" onChange={handleNameChange} />
+                    <label htmlFor="first-name">First Name*</label>
+                    <input  name="firstname" type="text" id="first-name" onChange={handleNameChange} required/>
                     {showError && <p className="error">Les chiffres ne sont pas autorisés dans les champs de prénom </p>}
 
-                    <label htmlFor="last-name">Last Name</label>
-                    <input name="lastname" type="text" id="last-name" onChange={handleNameChange} />
+                    <label htmlFor="last-name">Last Name*</label>
+                    <input name="lastname" type="text" id="last-name" onChange={handleNameChange} required/>
                     {showError && <p className="error">Les chiffres ne sont pas autorisés dans les champs du nom de famille </p>}
 
-                    <label htmlFor="date-of-birth">Date of Birth</label>
-                    <DatePicker onSelectedDate={getDateOfBirth}  id="date-of-birth" />
+                    <label htmlFor="date-of-birth">Date of Birth*</label>
+                    <DatePicker onSelectedDate={getDateOfBirth}  id="date-of-birth" required />
 
-                    <label htmlFor="start-date">Start Date</label>
-                    <DatePicker onSelectedDate={getStartDate}  id="start-date" />
+                    <label htmlFor="start-date">Start Date*</label>
+                    <DatePicker onSelectedDate={getStartDate}  id="start-date" required />
 
                     <fieldset className={styles.address}>
                         <legend>Address</legend>
 
-                        <label htmlFor="street">Street</label>
+                        <label htmlFor="street">Street*</label>
                         <input name ="street" type="text" id="street" />
 
-                        <label htmlFor="city">City</label>
+                        <label htmlFor="city">City*</label>
                         <input  name ="city" type="text" id="city" />
 
-                        <label htmlFor="state">State</label>
+                        <label htmlFor="state">State*</label>
                         <select name="state" id="state">
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
                             <option value="AZ">Arizona</option>
                         </select>
 
-                        <label htmlFor="zip-code">Zip Code</label>
-                        <input name="zipCode" type="text" id="zip-code" onChange={handleZipCodeChange} />
+                        <label htmlFor="zip-code">Zip Code*</label>
+                        <input name="zipCode" type="text" id="zip-code" onChange={handleZipCodeChange}  required/>
                         {showZipError && <p className="error">Le code postal ne doit contenir que des chiffres.</p>}
 
                     </fieldset>
